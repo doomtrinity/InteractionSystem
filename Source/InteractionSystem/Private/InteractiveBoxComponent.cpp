@@ -16,8 +16,8 @@ UInteractiveBoxComponent::UInteractiveBoxComponent(const FObjectInitializer& Obj
 	PrimaryComponentTick.bCanEverTick = true;
 	
 	// actor (owner) must replicate too, and should always be relevant
-	bReplicates = true; // 4.22
-	// SetIsReplicatedByDefault(true); // 4.26
+	//bReplicates = true; // 4.22
+	SetIsReplicatedByDefault(true); // 4.26
 
 	SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	SetCollisionResponseToAllChannels(ECR_Ignore);
